@@ -2,9 +2,8 @@ CREATE DATABASE ni_monitoring;
 
 CREATE TABLE fb_agency (
 	/*Network Partner Monitoring Form */
-    P_id int NOT NULL,
-    ADD PRIMARY KEY (P_id),
-    AgencyCountry varchar(255),
+    P_id int NOT NULL PRIMARY KEY,
+    AgencyCounty varchar(255),
     AgencyNumber int,
     TodaysDate date,
     DateOfLastMonitor date,
@@ -21,21 +20,13 @@ CREATE TABLE fb_agency (
     PrimaryEmail varchar(255),
     DateofMostRecentFoodSafteyTraining date,
     TEOF_NorIll_HasCurrentVarificationOfTaxExemptStatusOnFile boolean,
-    TEOF_IRS_Varification boolean,
+    TEOF_IRS_Varification tinyint, /*for boolean - store 0 or 1*/
     DateOfIRSVarification date,
     EmergencyFoodProgram boolean,
     DateOFContract date,
 
-    /*not sure we need these booleans - use fb_agency PK as FK to link */
-    MP_SoupKitchen boolean,
-    MP_GroupHome boolean,
-    MP_Shelter_TransitionalLiving boolean,
-    MP_DayCare boolean,
-    MP_YouthProgramAfterSchool boolean,
-    GP_FoodPantry boolean,
-    GP_Seasonal boolean,
-    GP_MobilePantry boolean,
-    GP_Backpack boolean,
+    ,
+  
  );
 
 CREATE TABLE fb_interview (
@@ -74,7 +65,15 @@ CREATE TABLE fb_interview (
 );
 
 CREATE TABLE meal_program_information (
+    meal_id int primary key auto_increment, 
     Intrw_id int,
+    
+    
+    MP_SoupKitchen boolean,
+    MP_GroupHome boolean,
+    MP_Shelter_TransitionalLiving boolean,
+    MP_DayCare boolean,
+    MP_YouthProgramAfterSchool boolean
     MonthlyServiceData boolean,
 	NumberOfMealsServerdLastMonth int,
 	DoesFoodBankHaveSafeHandlingCertification boolean,
@@ -95,8 +94,14 @@ CREATE TABLE meal_program_information (
 	SCHL_LunchFee int,
 	SCHL_ReducedLunchFee int
 );
-CREATE TABLE meal_grocery_program_information (
+CREATE TABLE grocery_program_information (
+    grocery_id int primary key auto_increment,
     Intrw_id int,
+    
+    GP_FoodPantry tinyint, /*boolean*/
+    GP_Seasonal boolean,
+    GP_MobilePantry boolean,
+    GP_Backpack boolean,
 	DistMthd_ChoicePantry boolean,
 	DistMthd_Traditional boolean,
 	DistMthd_Combination boolean,
@@ -120,14 +125,14 @@ CREATE TABLE meal_grocery_program_information (
 	FoodDeliveredToClients boolean
 );
 CREATE TABLE direct_connect_program (
+	dc_id int primary key, 
     Intrw_id int,
-	DirectConnectParticipation boolean,
 	ColdFoodProcess varchar(255),
 	CopiesOfPickupPapers boolean,
 	SampleTempsDocumentedAtTimeOfPickUpandDelivery boolean,
 	TempControlledDevicesForFoodTransport boolean
 );
-CREATE TABLE emergency_food_program_EEP_information (
+CREATE TABLE emergency_food_program_EEP_information ( /*this should be with interview*/
     Intrw_id int,
 	DiscriminationComplaintsInPastYear boolean,
 	HaveComplaintsBeenForwardedToFoodBank boolean,
@@ -162,19 +167,19 @@ CREATE TABLE emergency_food_program_EEP_information (
 	ProxyFormContainsOriginalSignatureOfRecipient boolean,
 	DesignatedProxySignTheProxyFormInPresebceOfPantryPersonnel boolean
 );
-CREATE TABLE forms (
-    Intrw_id int,
-	AgencyMembershipAgreementandLiabilityRelease boolean,
+CREATE TABLE forms ( /*put with interview or agency*/
+  
+	AgencyMembershipAgreementandLiabilityRelease varchar(255), /*store url*/
 	IllinoisFoodSanitationLicense boolean,
 	HealthDepartentPermitandInspection boolean,
 	PestControl boolean
 //research how to store pdf or jpg in SQL (feature of application could be to upload a picture to form)
 );
-CREATE TABLE violations_concerns (
+CREATE TABLE violations_concerns ( /* put with interview*/
     Intrw_id int,
-	CommentsFromAgencyStaff varchar(255)
+	CommentsFromAgencyStaff text
 );
-CREATE TABLE comments_accolades (
+CREATE TABLE comments_accolades (  /*add to interview*/
 	Intrw_id int,
     CommentsFromAgencyStaff varchar(255),
     AgencyNeeds_Volunteers boolean,
