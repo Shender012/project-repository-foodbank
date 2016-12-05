@@ -1,4 +1,7 @@
+DROP DATABASE IF EXISTS ni_monitoring;
 CREATE DATABASE ni_monitoring;
+
+use ni_monitoring;
 
 CREATE TABLE fb_agency (
 	/*Network Partner Monitoring Form */
@@ -8,7 +11,6 @@ CREATE TABLE fb_agency (
 	TodaysDate date,
 	DateOfLastMonitor date,
 	AgencyName varchar(255),
-	AgencyNumber int,
 	ParentAgencyName varchar(255),
 	ParentAgencyNumber int,
 	ContactName varchar(255),
@@ -20,7 +22,7 @@ CREATE TABLE fb_agency (
 	PrimaryEmail varchar(255),
 	DateofMostRecentFoodSafteyTraining date,
 	TEOF_NorIll_HasCurrentVarificationOfTaxExemptStatusOnFile tinyint,
-	TEOF_IRS_Varification tinyint, 
+	TEOF_IRS_Varification tinyint,
 	DateOfIRSVarification date,
 	EmergencyFoodProgram tinyint,
 	DateOFContract date,
@@ -30,7 +32,7 @@ CREATE TABLE fb_agency (
 	IllinoisFoodSanitationLicense tinyint,
 	HealthDepartentPermitandInspection tinyint,
 	PestControl tinyint
-  
+
  );
 
 CREATE TABLE fb_interview (
@@ -46,13 +48,13 @@ CREATE TABLE fb_interview (
 	/*Part III: Food Safety, Storage and Inventory*/
 	DoesTheLocalHealthDepartmentRequireAPermit tinyint,
 	IfYesProvideDateOfLastInspection date,
-	IfYesProvideCopyOfPermitOfLastInspectionScore int, //What to do fro conditional variables
+	IfYesProvideCopyOfPermitOfLastInspectionScore int, /*What to do for conditional variables*/
 	IsThereACleaningScheduleEstablishedAndPosted tinyint,
 	PestControlRoutine tinyint,
 	PestControlCompany varchar(255),
 	PestControlLastVisit date,
 	IsAllFoodStoredAtLocation tinyint,
-	IfNoWhereIsFoodStored varchar(255), //What to do fro conditional variables
+	IfNoWhereIsFoodStored varchar(255), /*What to do fro conditional variables*/
 	IsAllFoodStoredSixInchesOffFloor tinyint,
 	RefrigeratorTempBetween35and40F tinyint,
 	RefrigeratorTemp int,
@@ -61,9 +63,6 @@ CREATE TABLE fb_interview (
 	WorkingThermometersInStorageAreas tinyint,
 	ThermometerTempsInProperRange tinyint,
 	TempLogsMaintainedAndPosted tinyint,
-	PRIMARY KEY(Agency_id, Intrw_id), /* composite primary key*/
-	CONSTRAINT fb_interview_fk_agency
-	FOREIGN KEY (Agency_id) REFERENCES fb_agency(P_id) /* this creates a FK constraint*/
 
 	/*Emergency Food Program EEP Information*/
 	DiscriminationComplaintsInPastYear tinyint,
@@ -94,34 +93,40 @@ CREATE TABLE fb_interview (
 	ClientAddressRecorded tinyint,
 	HouseholdSizeRecorded tinyint,
 	NumOfChildren18andUnderRecordedInTheTANFBox tinyint,
+
 	/*Questions if proxy forms are used*/
 	AreProxyFormsForCorrectYear tinyint,
 	ProxyFormContainsOriginalSignatureOfRecipient tinyint,
 	DesignatedProxySignTheProxyFormInPresebceOfPantryPersonnel tinyint,
+
 	/*Violations/Concerns */
-	CommentsFromAgencyStaff text,
+	VioloationCommentsFromAgencyStaff varchar(255),
+
 	/*Comments/Accolades*/
-	Intrw_id int,
-	CommentsFromAgencyStaff varchar(255),
+	AccoladesCommentsFromAgencyStaff varchar(255),
 	AgencyNeeds_Volunteers tinyint,
 	AgencyNeeds_Equiptment tinyint,
 	AgencyNeeds_Funding tinyint,
 	AgencyNeeds_Training tinyint,
-	DigitalSignNIFBRep //possibly jpg of sig?
+	DigitalSignNIFBRep varchar(255), /*possibly jpg of sig? - URL of JPG?*/
 	DateOfDSNIFBRep date,
-	DigitalSignAgencyRep //Same^
-	DataOfDSAgencyRep date
+	DigitalSignAgencyRep varchar(255), /*Same^*/
+	DataOfDSAgencyRep date,
+
+	PRIMARY KEY(Agency_id, Intrw_id), /* composite primary key*/
+	CONSTRAINT fb_interview_fk_agency
+	FOREIGN KEY (Agency_id) REFERENCES fb_agency(Agency_id) /* this creates a FK constraint*/
 );
 
 CREATE TABLE meal_program_information (
-	meal_id int primary key auto_increment, 
+	meal_id int primary key auto_increment,
 	Intrw_id int,
 
 	MP_SoupKitchen tinyint,
 	MP_GroupHome tinyint,
 	MP_Shelter_TransitionalLiving tinyint,
 	MP_DayCare tinyint,
-	MP_YouthProgramAfterSchool tinyint
+	MP_YouthProgramAfterSchool tinyint,
 	MonthlyServiceData tinyint,
 	NumberOfMealsServerdLastMonth int,
 	DoesFoodBankHaveSafeHandlingCertification tinyint,
@@ -133,7 +138,7 @@ CREATE TABLE meal_program_information (
 	SafeHandlingCertPostedInKitchen tinyint,
 	DaysOfOperationPostedVisible tinyint,
 	RequirementsForFoodAssistance varchar(255),
-	AverageNumberOfServed int
+	AverageNumberOfServed int,
 	GRPHOME_NumOfResidents int,
 	GRPHOME_NumOfMealsServed int,
 	GRPHOME_WhoParticipatedInMealPrograms varchar(255),
@@ -173,7 +178,7 @@ CREATE TABLE grocery_program_information (
 	FoodDeliveredToClients tinyint
 );
 CREATE TABLE direct_connect_program (
-	dc_id int primary key, 
+	dc_id int primary key,
     	Intrw_id int,
 
 	ColdFoodProcess varchar(255),
