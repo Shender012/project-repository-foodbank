@@ -1,7 +1,6 @@
-DROP DATABASE IF EXISTS ni_monitoring;
-CREATE DATABASE ni_monitoring;
 
-use ni_monitoring;
+
+use ni_monitoring; /*use your database here*/
 
 CREATE TABLE fb_agency (
 	/*Network Partner Monitoring Form */
@@ -138,7 +137,7 @@ CREATE TABLE meal_program_information (
 	SafeHandlingCertPostedInKitchen tinyint,
 	DaysOfOperationPostedVisible tinyint,
 	RequirementsForFoodAssistance varchar(255),
-	AverageNumberOfServed int,
+	AverageNumberOfServed int, i
 	GRPHOME_NumOfResidents int,
 	GRPHOME_NumOfMealsServed int,
 	GRPHOME_WhoParticipatedInMealPrograms varchar(255),
