@@ -1,6 +1,5 @@
+use foodbank; 
 
-
-use ni_monitoring; /*use your database here*/
 
 CREATE TABLE fb_agency (
 	/*Network Partner Monitoring Form */
