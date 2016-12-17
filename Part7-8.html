@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+<link rel="stylesheet" href="form.css"/>
+<header>
+	<title>Northern Illinos Food Bank</title> 
+</header> 
+<body style="background-color:floralwhite">
+<div id="wrapper">
+	<form>
+		<div class="form-group">
+			<div class="row">
+            	<img src="http://solvehungertoday.org/wp-content/uploads/2014/07/logo.png" alt="Northern Illinois Food Bank" href="http://solvehungertoday.org/" class="pull-left lm" >
+			</div>
+            <div class="row">
+				<div class="col-xs-2 pull-right col-sm-1 rm">
+					<label for="agency_num">Agency #</label>
+					<input class="form-control" id="agency_num" type="text" disabled>
+				</div>
+			</div>
+            <!-- VIOLATIONS/CONCERNS SECTION-->
+            <div class="row"> 
+            	<div class="header-underline">
+                	<h4 style="margin-top:5em">Part VII: Violations/Concerns</h4>
+                </div>
+            </div>>
+            <div class="row">
+				<div class="form-group pull-left lm col-sm-8">
+                      <textarea class="form-control" rows="5" id="violations_concerns" placeholder="Violations/Concerns"></textarea>
+             	</div>
+			</div>
+            <!-- COMMENTS/ACCOLADES SECTION-->
+            <div class="row"> 
+            	<div class="header-underline">
+                	<h4 style="margin-top:5em">Part VIII: Comments/Accolades</h4>
+                </div>
+            </div>
+            <div class="row">
+				<div class="form-group pull-left lm col-sm-8">
+                      <textarea class="form-control" rows="5" id="comments_accolades" placeholder="Comments from agency staff concerning this visit, ordering, pick up, or other related issues. How can Northern Illinois Food Bank better serve this agency?"></textarea>
+             	</div>
+			</div>
+            <div class="row yes-no-quest">
+                <p class="pull-left lm"><b>Capacity Building Needs &nbsp;<small>(What does the agency need to better serve their clients?)</small></b></p>
+                <div class=" pull-left lm-tab">
+                  	<label class="checkbox-inline bold"><input type="building_needs[]" value="">Volunteers&nbsp;</label>
+                    <label class="checkbox-inline bold"><input type="building_needs[]" value="">Equiptment&nbsp;</label>
+                    <label class="checkbox-inline bold"><input type="building_needs[]" value="">Funding&nbsp;</label>	
+                    <label class="checkbox-inline bold"><input type="building_needs[]" value="">Training&nbsp;</label><p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row">
+				<div class="col-xs-2 pull-left col-sm-3 lm">
+					<label for="NIFB_rep_sign"><small>Northern Illinois Food Bank Representative *Digital Signature</small></label>
+					<input class="form-control" id="NIFB_rep_sign" type="text">
+				</div>
+                <div class="col-xs-2 pull-left col-sm-3">
+					<label for="NIFB_sign_date"><small>Date</small></label>
+					<input class="form-control" id="NIFB_sign_date" type="text">
+				</div>
+			</div>
+            <div class="row">
+				<div class="col-xs-2 pull-left col-sm-3 lm">
+					<label for="agency_sign"><small>Agency *Digital Signature</small></label>
+					<input class="form-control" id="agency_sign" type="text">
+				</div>
+                <div class="col-xs-2 pull-left col-sm-3">
+					<label for="agency_sign_date"><small>Date</small></label>
+					<input class="form-control" id="agency_sign_date" type="text">
+				</div>
+			</div>
+            <div class="row pull-right rm">
+            	<a href="http://cs.lewisu.edu/~alanwoshea/#" class="btn btn-default" role="button">Submit</a>
+            </div>
+		</div>
+	</form>
+</div>
+</body>
+</html>

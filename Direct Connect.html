@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+<link rel="stylesheet" href="form.css"/>
+<header>
+	<title>Northern Illinos Food Bank</title> 
+</header> 
+<body style="background-color:floralwhite">
+<div id="wrapper">
+	<form>
+		<div class="form-group">
+			<div class="row">
+            	<img src="http://solvehungertoday.org/wp-content/uploads/2014/07/logo.png" alt="Northern Illinois Food Bank" href="http://solvehungertoday.org/" class="pull-left lm" >
+			</div>
+            <div class="row">
+				<div class="col-xs-2 pull-right col-sm-1 rm">
+					<label for="agency_num">Agency #</label>
+					<input class="form-control" id="agency_num" type="text" disabled>
+				</div>
+			</div>
+            <div class="row"> 
+            	<div class="text-center">
+                	<h3>Part IV: Direct Connect Program</h3>
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-6"><b>Does the partner participate in DIRECT CONNECT? &nbsp;<small>(pick up at a retail store)</small></b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="direct_conn_participation">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="direct_conn_participation">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row">
+				<div class="col-xs-2 pull-left col-sm-6 lm">
+					<label for="cold_food_transport"><small>If yes, how are cold foods kept cold during transport?</small></label>
+					<input class="form-control" id="cold_food_transport" type="text">
+				</div>
+			</div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-6"><b>Do they have copies of their pick up paper work? &nbsp;<small>(must keep on file for 7 years)</small></b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="pickup_paperwork_copies">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="pickup_paperwork_copies">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-6"><b>Are sample temperatures documented at the time of pick up and delivery?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="doc_of_sample_temps">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="doc_of_sample_temps">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-6"><b>Do they have temperature controlled devices to be used during food transportation</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="transport_temp_devices">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="transport_temp_devices">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            
+            <div class="row pull-right rm">
+            	<a href="http://cs.lewisu.edu/~alanwoshea/Emergency Food Program.html" class="btn btn-default" role="button">Next</a>
+            </div>
+		</div>
+	</form>
+</div>
+</body>
+</html>

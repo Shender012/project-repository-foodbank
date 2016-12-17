@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="form.css"/>
+<header>
+	<title>Northern Illinos Food Bank</title> 
+</header> 
+<body style="background-color:floralwhite">
+<?php include 'foodbank.php' ; ?> 
+<div id="wrapper">
+	<form action="foodbank.php" method="post">
+		<div class="form-group">
+			<div class="row">
+            	<img src="http://solvehungertoday.org/wp-content/uploads/2014/07/logo.png" alt="Northern Illinois Food Bank" href="http://solvehungertoday.org/" class="pull-left lm" >
+            </div>
+            <div class="row">
+                <div class="col-xs-2 pull-right col-sm-2 rm">
+					<label>Agency County</label>
+					<input class="form-control" name="agency_county" type="text">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-2 pull-right col-sm-1 rm">
+					<label>Agency #</label>
+					<input class="form-control" name="agency_num" type="text"> <!-- trying to print this-->
+				</div>
+			</div>
+            <div class="row"> 
+            	<div class="text-center">
+                	<h2>Network Partner Monitoring Form</h2>
+                </div>
+            </div>
+            <div class="row">
+				<div class="col-xs-2 pull-left col-sm-2 lm">
+					<label for="todays_date">Today's Date</label>
+					<input class="form-control" name="todays_date" type="text">
+				</div>
+				<div class="col-xs-2 pull-left col-sm-2 rm">
+					<label for="last_monitor_date">Date of Last Monitor</label>
+					<input class="form-control" name="last_monitor_date" type="text">
+				</div>
+			</div>
+            <div class="row">
+				<div class="col-xs-2 pull-left col-sm-2 lm">
+					<label for="agency_name">Agency Name</label>
+					<input class="form-control" name="agency_name" type="text">
+				</div>
+				<div class="col-xs-2 pull-left col-sm-2 rm">
+					<label for="agency_numb">Agency #</label>
+					<input class="form-control" name="agency_numb" type="text">
+				</div>
+			</div>
+            <div class="row">
+				<div class="col-xs-2 pull-left col-sm-2 lm">
+					<label for="parent_agency_name">Parent Agency Name</label>
+					<input class="form-control" name="parent_agency_name" type="text">
+				</div>
+				<div class="col-xs-2 pull-left col-sm-2 rm">
+					<label for="parent_agency_numb">Agency #</label>
+					<input class="form-control" name="parent_agency_numb" type="text">
+				</div>
+			</div>
+            <div class="row">
+				<div class="col-xs-2 pull-left col-sm-2 lm">
+					<label for="site_address">Site Address</label>
+					<input class="form-control" name="site_address" type="text">
+				</div>
+				<div class="col-xs-2 pull-left col-sm-2 rm">
+					<label for="site_phone">Phone #</label>
+					<input class="form-control" name="site_phone" type="text">
+				</div>
+			</div>
+            <div class="row">
+				<div class="col-xs-2 pull-left col-sm-2 lm">
+					<label for="contact_name">Contact Name</label>
+					<input class="form-control" name="contact_name" type="text">
+				</div>
+				<div class="col-xs-2 pull-left col-sm-2 rm">
+					<label for="contact_phone">Phone #</label>
+					<input class="form-control" name="contact_phone" type="text">
+				</div>
+			</div>
+            <div class="row">
+				<div class="col-xs-2 pull-left col-sm-2 lm">
+					<label for="directors_name">Director's Name</label>
+					<input class="form-control" name="directors_name" type="text">
+				</div>
+				<div class="col-xs-2 pull-left col-sm-2 rm">
+					<label for="directors_phone">Phone #</label>
+					<input class="form-control" name="directors_phone" type="text">
+				</div>
+			</div>
+            <div class="row">
+				<div class="col-xs-2 pull-left col-sm-2 lm">
+					<label for="additional_contact_name">Additional Contact Name</label>
+					<input class="form-control" name="additional_contact_name" type="text">
+				</div>
+				<div class="col-xs-2 pull-left col-sm-2 rm">
+					<label for="additional_contact_phone">Phone #</label>
+					<input class="form-control" name="additional_contact_phone" type="text">
+				</div>
+			</div>
+            <div class="row">
+				<div class="col-xs-2 pull-left col-sm-2 lm">
+					<label for="primary_email">Primary Email</label>
+					<input class="form-control" name="primary_email" type="text">
+				</div>
+         	</div>
+            <div class="row">
+				<div class="col-xs-2 pull-left col-sm-2 lm">
+					<label for="date_most_recent_food_safety_training">Date of Most Recent Food Safety Training</label>
+					<input class="form-control" name="date_most_recent_food_safety_training" type="text">
+				</div>
+         	</div>
+            <div class="row yes-no-quest"> 
+            	<p class="pull-left col-sm-6"><b>Does Northern Illinois Food Bank have current verification of tax exempt status on file?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="tax_veri" value="1">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="tax_veri" value="0">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+            	</div>
+            </div>
+             <div class="row yes-no-quest"> 
+            	<p class="pull-left col-sm-6"><b>Was it verified on the IRS Automatic Revocation of Exemtion List?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="irs_veri" value="1">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="irs_veri" value="0">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+            	</div>
+            </div>
+            <div class="row">
+				<div class="col-xs-2 pull-left col-sm-2 lm">
+					<label for="date_of_verification">Date of Verification (Found at:
+                    	 <a href="http://www.irs.gov/charities/article/0,,name=240099.htm"> 						http://www.irs.gov/charities/article/0,,name=240099.html</a>)</label>
+					<input class="form-control" name="date_of_verification" type="text">
+				</div>
+         	</div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-6"><b>Emergency Food Program(EEP)?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="eep_veri" value="1">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="eep_veri" value="0">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2 pull-left col-sm-2 lm">
+					<label for="date_of_contract">Date of Contract</label>
+					<input class="form-control" name="date_of_contract" type="text">
+				</div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left"><b>Meal Program <br /><small>(5 year certificate)</small></b></p>
+                <div class=" pull-right">
+                  	<label class="checkbox-inline"><input type="checkbox" name="meal_program[]" value="SK">Soup Kitchen</label>
+                    <label class="checkbox-inline"><input type="checkbox" name="meal_program[]" value="GH">Group Home</label>
+                    <label class="checkbox-inline"><input type="checkbox" name="meal_program[]" value="ST">Shelter/Transitional 	Living</label>	<p></p> <!-- Temporary Solution For Appearance -->
+                    <label class="checkbox-inline"><input type="checkbox" name="meal_program[]" value="DC">Daycare</label>
+                    <label class="checkbox-inline"><input type="checkbox" name="meal_program[]" value="YP">Youth Program/After School</label><p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left"><b>Grocery Program <br /><small>(2 year certificate)</small></b></p>
+                <div class=" pull-right">
+                  	<label class="checkbox-inline"><input type="checkbox" name="meal_program[]" value="FP">Food Pantry</label>
+                    <label class="checkbox-inline"><input type="checkbox" name="meal_program[]" value="Seasonal">Seasonal</label>
+                    <label class="checkbox-inline"><input type="checkbox" name="meal_program[]" value="Mobile Pantry">Mobile Pantry</label>	
+                    <label class="checkbox-inline"><input type="checkbox" name="meal_program[]" value="Backpack">Backpack</label> <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2 pull-left col-sm-4 lm">
+					<label for="person_interviewed">Person Interviewed</label>
+					<input class="form-control" name="person_interviewed" type="text">
+				</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2 pull-left col-sm-4 lm">
+					<label for="days_time_operation"><small>Day(s) & time(s) of operation</small></label>
+					<input class="form-control" name="days_times_operation" type="text" placeholder="Ex. MWF, 9a - 12p">
+				</div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-6"><b>Is your organization required to have a single audit?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="optradio4" value="1">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="optradio4" value="0">No</label>
+                </div>
+                <p class="pull-left"><b><small>(If YES, obtain a copy or ask the site to provide a copy of the most recent audit within the next 30 days)</small></b></p>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-6"><b>Does the agency appear to be handicapped accessible?
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="optradio5" value="1">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="optradio5" value="0">No</label>
+                </div>
+            </div>
+            <div class="row pull-right rm">
+            	<input type="submit" value="Next">
+            </div>
+		</div>
+	</form>
+</div>
+</body>
+</html>
+

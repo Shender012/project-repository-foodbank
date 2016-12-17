@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <?php include "foodbank.php" ?>  
+<link rel="stylesheet" href="form.css"/>
+<header>
+	<title>Northern Illinos Food Bank</title> 
+</header> 
+<body style="background-color:floralwhite">
+<div id="wrapper">
+	<form action="foodbank.php" method="get|post">
+		<div class="form-group">
+			<div class="row">
+            	<img src="http://solvehungertoday.org/wp-content/uploads/2014/07/logo.png" alt="Northern Illinois Food Bank" href="http://solvehungertoday.org/" class="pull-left lm" >
+			</div>
+            <div class="row">
+				<div class="col-xs-2 pull-right col-sm-1 rm">
+					<label for="agency_num">Agency #</label>
+					<input class="form-control" id="agency_num" type="text" disabled placeholder="<?php print($agencynumber); ?>">
+				</div>
+			</div>
+            <div class="row"> 
+            	<div class="text-center">
+                	<h3>Part I: Meal Program Information</h3>
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-6"><b>Monthly Service data reported?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="msdradio">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="msdradio">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row">
+				<div class="col-xs-2 pull-left col-sm-2 lm">
+					<label for="num_of_meals_served_last_mon">Number of meals served last month:</label>
+					<input class="form-control" id="num_of_meals_served_last_mon" type="text">
+				</div>
+			</div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-6"><b>Does Food Bank have the Safe Food Handling Certification on file?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="fscofradio">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="fscofradio">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row">
+				<div class="col-xs-2 pull-right col-sm-3 rm">
+					<label for="name_date"><small>Name/date:</small></label>
+					<input class="form-control" id="name_date" type="text">
+				</div>
+			</div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-6"><b>Are fees/donations/memberships required of the clients for any service?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="feesreq">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="feesreq">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row">
+				<div class="col-xs-2 pull-right col-sm-3 rm">
+					<label for="membership_explaination"><small>If yes, please explain</small></label>
+					<input class="form-control" id="membership_explaination" type="text">
+				</div>
+			</div>
+            <div class="row">
+				<div class="col-xs-2 pull-left col-sm-6 lm">
+					<label for="funding_source">Funding Source</label>
+					<input class="form-control" id="funding_source" type="text">
+				</div>
+			</div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-6"><b>Is Safe Food Handling Certification posted in kitchen?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="safe_food_hand_posted">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="safe_food_hand_posted">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-6"><b>Are days and hours of operation posted on the outside of the facility & visible to clients?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="opt_times_posted">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="opt_times_posted">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row">
+				<div class="col-xs-2 pull-left col-sm-6 lm">
+					<label for="food_assist_require">What are the requirements for food assistance</label>
+					<input class="form-control" id="food_assist_require" type="text">
+				</div>
+			</div>
+            <div class="row">
+				<div class="col-xs-2 pull-left col-sm-2 lm">
+					<label for="ppl_served_per_month">Average number of people served per month:</label>
+					<input class="form-control" id="ppl_served_per_month" type="text">
+				</div>
+			</div>
+            <div class="row">
+            	<p class="pull-right rm-tab"><b>Group Homes / Transitional Living</b></p>
+            </div>
+            <div class="row">
+				<div class="col-xs-2 pull-right col-sm-1 rm text-right">
+					<label for="num_residents"><small>Number of <br /> residents: </small></label>
+					<input class="form-control" id="num_residents" type="text">
+				</div>
+                <div class="col-xs-2 pull-right col-sm-1 text-right">
+					<label for="num_meal_served_day"><small>Number of meals served daily:</small></label>
+					<input class="form-control" id="num_meal_served_day" type="text">
+				</div>
+			</div>
+            <div class="row">
+				<div class="col-xs-2 pull-right col-sm-4 rm text-right">
+                    	<label for="meal_prep_participation"><small>Who participates in meal preparation?</small></label>
+					<input class="form-control" id="meal_prep_participation" type="text">
+				</div>
+			</div>
+            <div class="row">
+            	<p class="pull-right rm-tab"><b>School / Daycare Program</b></p>
+            </div>
+            <div class="row">
+				<div class="col-xs-2 pull-right col-sm-1 rm text-right">
+					<label for="free_lunches"><small>Number of free lunches: </small></label>
+					<input class="form-control" id="free_lunches" type="text">
+				</div>
+                <div class="col-xs-2 pull-right col-sm-1 text-right">
+					<label for="reduced_lunches"><small>Number of reduced lunches:</small></label>
+					<input class="form-control" id="reduced_lunches" type="text">
+				</div>
+                <div class="col-xs-2 pull-right col-sm-1 text-right">
+					<label for="lunch_fee"><small>Lunch fee $ <br /> &nbsp;</small></label>
+					<input class="form-control" id="lunch_fee" type="text">
+				</div>
+                <div class="col-xs-2 pull-right col-sm-1 text-right">
+					<label for="reduced_lunche_fee"><small>Reduced lunch fee $ <br /> &nbsp;</small></label>
+					<input class="form-control" id="reduced_lunche_fee" type="text">
+				</div>
+			</div>
+             <div class="row pull-right rm">
+            	<a href="http://cs.lewisu.edu/~alanwoshea/Grocery Plan.html" class="btn btn-default" role="button">Next</a>
+            </div>
+		</div>
+	</form>
+</div>
+</body>
+</html>
+

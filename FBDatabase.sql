@@ -1,9 +1,10 @@
 use foodbank; 
 
+drop table if exist fb_agency;
 
 CREATE TABLE fb_agency (
 	/*Network Partner Monitoring Form */
-	Agency_id int NOT NULL PRIMARY KEY,
+	Agency_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	AgencyCounty varchar(255),
 	AgencyNumber int,
 	TodaysDate date,
