@@ -9,60 +9,135 @@
 <?php 
 	$agencycounty = $_POST["agency_county"];
 	$agencycounty = addslashes($agencycounty);
+	if ($agencycounty == ""){ 
+		$agencycounty = "Not Specified";
+	}
 	$agencynumber = $_POST["agency_num"];
 	$agencynumber = addslashes($agencynumber);
 	$todaysdate = $_POST["todays_date"];
+	if ($todaysdate == ""){ 
+		$todaysdate = "0000-00-00";
+	}
 	$todaysdate = addslashes($todaysdate);
 	$lastmonitordate = $_POST["last_monitor_date"];
+	if ($lastmonitordate == ""){ 
+		$lastmonitordate = "0000-00-00";
+	}
 	$lastmonitordate = addslashes($lastmonitordate);
 	$agencyname = $_POST["agency_name"];
+	if ($agencyname == ""){ 
+		$agencyname = "Not Specified";
+	}
 	$agencyname = addslashes($agencyname);
 	$parentagencyname = $_POST["parent_agency_name"];
+	if ($parentagencyname == ""){ 
+		$parentagencyname = "Not Specified";
+	}
 	$parentagencyname = addslashes($parentagencyname);
-	$parentagencynumber = $_POST["parent_agency_num"];
+	$parentagencynumber = $_POST["parent_agency_numb"];
+	if ($parentagencynumber == ""){ 
+		$parentagencynumber = "0";
+	}
 	$parentagencynumber = addslashes($parentagencynumber);
 	$siteaddress = $_POST["site_address"];
+	if ($siteaddress == ""){ 
+		$agensiteaddresscycounty = "Not Specified";
+	}
 	$siteaddress = addslashes($siteaddress);
 	$sitephone = $_POST["site_phone"];
+	if ($sitephone == ""){ 
+		$sitephone = "Not Specified";
+	}
 	$sitephone = addslashes($sitephone);
 	$contactname = $_POST["contact_name"];
+	if ($contactname == ""){ 
+		$contactname = "Not Specified";
+	}
 	$contactname = addslashes($contactname);
 	$contactphone = $_POST["contact_phone"];
+	if ($contactphone == ""){ 
+		$contactphone = "Not Specified";
+	}
 	$contactphone = addslashes($contactphone);
 	$directorsname = $_POST["directors_name"];
+	if ($directorsname == ""){ 
+		$directorsname = "Not Specified";
+	}
 	$directorsname = addslashes($directorsname);
 	$directorphone = $_POST["directors_phone"];
+	if ($directorphone == ""){ 
+		$directorphone = "Not Specified";
+	}
 	$directorphone = addslashes($directorphone);
 	$additionalcontactname = $_POST["additional_contact_name"];
+	if ($additionalcontactname == ""){ 
+		$additionalcontactname = "Not Specified";
+	}
 	$additionalcontactname = addslashes($additionalcontactname);
 	$additionalcontactphone = $_POST["additional_contact_phone"];
+	if ($additionalcontactphone == ""){ 
+		$additionalcontactphone = "Not Specified";
+	}
 	$additionalcontactphone = addslashes($additionalcontactphone);
 	$primaryemail = $_POST["primary_email"];
+	if ($primaryemail == ""){ 
+		$primaryemail = "Not Specified";
+	}
 	$primaryemail = addslashes($primaryemail);
 	$dateofmostrecentfoodsafety = $_POST["date_most_recent_food_safety_training"];
+	if ($dateofmostrecentfoodsafety == ""){ 
+		$dateofmostrecentfoodsafety = "0000-00-00";
+	}
 	$dateofmostrecentfoodsafety = addslashes($dateofmostrecentfoodsafety);
 	$verificationoftaxexemptstatus = $_POST["tax_veri"];
+	if ($verificationoftaxexemptstatus == ""){ 
+		$verificationoftaxexemptstatus = "No";
+	}
 	$verificationoftaxexemptstatus = addslashes($verificationoftaxexemptstatus);
 	$irstaxverification = $_POST["irs_veri"];
+	if ($irstaxverification == ""){ 
+		$irstaxverification = "No";
+	}
 	$irstaxverification = addslashes($irstaxverification);
 	$dateofverification = $_POST["date_of_verification"];
+	if ($dateofverification == ""){ 
+		$dateofverification = "0000-00-00";
+	}
 	$dateofverification = addslashes($dateofverification);
 	$emergencyfoodprogram = $_POST["eep_veri"];
+	if ($emergencyfoodprogram == ""){ 
+		$emergencyfoodprogram = "No";
+	}
 	$emergencyfoodprogram = addslashes($emergencyfoodprogram);
 	$dateofcontract = $_POST["date_of_contract"];
+	if ($dateofcontract == ""){ 
+		$dateofcontract = "0000-00-00";
+	}
 	$dateofcontract = addslashes($dateofcontract);
-	$mealprogram = $_POST["meal_program"];
-	$mealprogram = addslashes($mealprogram);
+	$mealprogram = implode(', ',$_POST['meal_program']);
+	$groceryprogram = implode(', ',$_POST['grocery_program']);
 	$personinterviewed = $_POST["person_interviewed"];
+	if ($personinterviewed == ""){ 
+		$personinterviewed = "Not Specified";
+	}
 	$personinterviewed = addslashes($personinterviewed);
 	$daysandtimesoperation = $_POST["days_times_operation"];
+	if ($daysandtimesoperation == ""){ 
+		$daysandtimesoperation = "Not Specified";
+	}
 	$daysandtimesoperation = addslashes($daysandtimesoperation);
 	$orgrequiredsingleaudit = $_POST["optradio4"];
+	if ($orgrequiredsingleaudit == ""){ 
+		$orgrequiredsingleaudit = "No";
+	}
 	$orgrequiredsingleaudit = addslashes($orgrequiredsingleaudit);
 	$agencyhandicapedaccessible = $_POST["optradio5"];
+	if ($agencyhandicapedaccessible == ""){ 
+		$agencyhandicapedaccessible = "No";
+	}
 	$agencyhandicapedaccessible = addslashes($agencyhandicapedaccessible);
 	
-	
+	/*
 	echo "$agencycounty, $agencynumber, $todaysdate, $lastmonitordate, $agencyname, $parentagencyname, $parentagencynumber, $siteaddress, $sitephone, $contactname, $contactphone, 
 	$directorsname,$directorphone, $additionalcontactname, $additionalcontactphone, $primaryemail, $dateofmostrecentfoodsafety, $verificationoftaxexemptstatus, $irstaxverification, $dateofverification,
 	$emergencyfoodprogram, $dateofcontract, $mealprogram, $personinterviewed, $daysandtimesoperation, $orgrequiredsingleaudit, $agencyhandicapedaccessible";
@@ -70,6 +145,9 @@
 	/*Meal Plan Page*/
 	
 	$monthlyservicedata = $_POST["msdradio"];
+	if ($monthlyservicedata == ""){ 
+		$monthlyservicedata = "0";
+	}
 	$nummealsserved = $_POST["num_of_meals_served_last_mon"];
 	$foodsafetycertonfile = $_POST["fscofradio"];
 	$nameanddate = $_POST["name_date"];
@@ -187,19 +265,26 @@
 	} else { 
 		echo "connection successful";
 	}
+	/*Agency Table*/
+	$query_fb_agency = "insert into fb_agency (AgencyCounty, Agency_id, TodaysDate, DateOfLastMonitor, AgencyName, ParentAgencyName, ParentAgencyNumber, SiteAddress, SitePhone, ContactName, ContactPhoneNumber, DirectorName, DirectorPhoneNumber, AddtionalContactName, AdditonalContactPhoneNumber,PrimaryEmail, DateofMostRecentFoodSafteyTraining, TEOF_NorIll_HasCurrentVarificationOfTaxExemptStatusOnFile, TEOF_IRS_Varification, DateOfIRSVarification, EmergencyFoodProgram, DateOFContract, MealProgram, GroceryProgram, PersonInterview, DaysHoursOFOperation,OrgRequiredToHaveAudit, HandicappedAccessible) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $stmtA = $db->prepare($query_fb_agency);
+    $stmtA->bind_param("sissssisssssssssssssssssssss", $agencycounty, $agencynumber, $todaysdate, $lastmonitordate, $agencyname, $parentagencyname, $parentagencynumber, $siteaddress, $sitephone, $contactname, $contactphone, $directorsname,$directorphone, $additionalcontactname, $additionalcontactphone, $primaryemail, $dateofmostrecentfoodsafety, $verificationoftaxexemptstatus, $irstaxverification, $dateofverification, $emergencyfoodprogram, $dateofcontract, $mealprogram, $groceryprogram, $personinterviewed, $daysandtimesoperation, $orgrequiredsingleaudit, $agencyhandicapedaccessible);
+    $stmtA->execute();
+    echo $stmtA->affected_rows." data inserted into database. ";
+     
+	/*Interview Table*/
+	$query_intrw = "insert into fb_interview (Agency_id, Intrw_id) values (?, ?)";
+    $stmtI = $db->prepare($query_intrw);
+    $stmtI->bind_param("ii", $agencynumber, $agencynumber);
+    $stmtI->execute();
+    echo $stmtI->affected_rows." data inserted into database. ";
 	
-	$query = "insert into fb_agency (AgencyCounty, AgencyNumber) values (?, ?)";
-	$stmt = $db->prepare($query);
-	$stmt->bind_param('ss', $agencycounty, $agencynumber);
-	$stmt->execute();
-    echo $stmt->affected_rows." data entered in successfully";
-    mysqli_close($db); 
+    mysqli_close($db);
 ?>
 <h1><?php
 echo "$agencycounty, $agencynumber, $todaysdate, $lastmonitordate, $agencyname, $parentagencyname, $parentagencynumber, $siteaddress, $sitephone, $contactname, $contactphone, 
 	$directorsname,$directorphone, $additionalcontactname, $additionalcontactphone, $primaryemail, $dateofmostrecentfoodsafety, $verificationoftaxexemptstatus, $irstaxverification, $dateofverification,
-	$emergencyfoodprogram, $dateofcontract, $mealprogram, $personinterviewed, $daysandtimesoperation, $orgrequiredsingleaudit, $agencyhandicapedaccessible";
-
-		?></h1>
+	$emergencyfoodprogram, $dateofcontract, $mealprogram, $groceryprogram, $personinterviewed, $daysandtimesoperation, $orgrequiredsingleaudit, $agencyhandicapedaccessible";
+?></h1>
 </body>
 </html>
