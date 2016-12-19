@@ -162,5 +162,5 @@
     echo $stmt->affected_rows." data entered in successfully";
     mysqli_close($db);
 ?>> 
-</body>
+
 </html>

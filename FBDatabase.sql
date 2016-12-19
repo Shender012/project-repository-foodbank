@@ -1,22 +1,21 @@
-use foodbank; 
-
-
+use foodbank;
+ DROP IF TABLE EXISTS fb_agency;
 CREATE TABLE fb_agency (
 	/*Network Partner Monitoring Form */
 	Agency_id int NOT NULL PRIMARY KEY,
 	AgencyCounty varchar(255),
-	AgencyNumber int,
+	AgencyNumber int default "0",
 	TodaysDate date,
 	DateOfLastMonitor date,
 	AgencyName varchar(255),
 	ParentAgencyName varchar(255),
 	ParentAgencyNumber int,
 	ContactName varchar(255),
-	ContactPhoneNumber int,
+	ContactPhoneNumber varchar(30),
 	DirectorName varchar(255),
-	DirectorPhoneNumber int,
+	DirectorPhoneNumber varchar(30),
 	AddtionalContactName varchar(255),
-	AdditonalContactPhoneNumber int,
+	AdditonalContactPhoneNumber varchar(30),
 	PrimaryEmail varchar(255),
 	DateofMostRecentFoodSafteyTraining date,
 	TEOF_NorIll_HasCurrentVarificationOfTaxExemptStatusOnFile tinyint,
@@ -25,6 +24,7 @@ CREATE TABLE fb_agency (
 	EmergencyFoodProgram tinyint,
 	DateOFContract date,
 
+	MealProgram varchar(255),
     /*Forms*/
 	AgencyMembershipAgreementandLiabilityRelease varchar(255), /*store url*/
 	IllinoisFoodSanitationLicense tinyint,
@@ -35,7 +35,7 @@ CREATE TABLE fb_agency (
 
 CREATE TABLE fb_interview (
 	Agency_id int, /*this links the interview to a particular agency*/
-	Intrw_id int,
+	Intrw_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	PersonInterview varchar(255),
 	DaysOfOperation varchar(255), /*Need to know if "days' (varchar) or dates (date) */
 	TimeOfOperationStart time,
@@ -110,8 +110,7 @@ CREATE TABLE fb_interview (
 	DateOfDSNIFBRep date,
 	DigitalSignAgencyRep varchar(255), /*Same^*/
 	DataOfDSAgencyRep date,
-
-	PRIMARY KEY(Agency_id, Intrw_id), /* composite primary key*/
+ /* composite primary key*/
 	CONSTRAINT fb_interview_fk_agency
 	FOREIGN KEY (Agency_id) REFERENCES fb_agency(Agency_id) /* this creates a FK constraint*/
 );
@@ -130,13 +129,13 @@ CREATE TABLE meal_program_information (
 	DoesFoodBankHaveSafeHandlingCertification tinyint,
 	SafeHandlingCertName varchar(255),
 	SafeHandlingCertDate date,
-	FeesDonationsMembershipsRequired	tinyint,
+	FeesDonationsMembershipsRequired tinyint,
 	FeesDonationMembershipsExplaination varchar(255),
 	FundingSource varchar(255),
 	SafeHandlingCertPostedInKitchen tinyint,
 	DaysOfOperationPostedVisible tinyint,
 	RequirementsForFoodAssistance varchar(255),
-	AverageNumberOfServed int, i
+	AverageNumberOfServed int,
 	GRPHOME_NumOfResidents int,
 	GRPHOME_NumOfMealsServed int,
 	GRPHOME_WhoParticipatedInMealPrograms varchar(255),
@@ -220,3 +219,5 @@ CREATE TABLE emergency_food_program_EEP_information ( //this should be with inte
 	ProxyFormContainsOriginalSignatureOfRecipient tinyint,
 	DesignatedProxySignTheProxyFormInPresebceOfPantryPersonnel tinyint
 ); */
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Status Help

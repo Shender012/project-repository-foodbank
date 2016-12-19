@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+<link rel="stylesheet" href="form.css"/>
+<header>
+	<title>Northern Illinos Food Bank</title> 
+</header> 
+<body style="background-color:floralwhite">
+<div id="wrapper">
+	<form>
+		<div class="form-group">
+			<div class="row">
+            	<img src="http://solvehungertoday.org/wp-content/uploads/2014/07/logo.png" alt="Northern Illinois Food Bank" href="http://solvehungertoday.org/" class="pull-left lm" >
+			</div>
+            <div class="row">
+				<div class="col-xs-2 pull-right col-sm-1 rm">
+					<label for="agency_num">Agency #</label>
+					<input class="form-control" id="agency_num" type="text" disabled>
+				</div>
+			</div>
+            <div class="row"> 
+            	<div class="text-center">
+                	<h3>Part II: Grocery Program Information</h3>
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left"><b>What type of distribution method is utilized?</b></p>
+                <div class=" pull-right">
+                  	<label class="checkbox-inline"><input type="distribution_method[]" value="">Choice Pantry</label>
+                    <label class="checkbox-inline"><input type="distribution_method[]" value="">Traditional</label>
+                    <label class="checkbox-inline"><input type="distribution_method[]" value="">Combination</label>
+                    <label class="checkbox-inline"><input type="distribution_method[]" value="">Other</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+             <div class="row">
+				<div class="col-xs-2 pull-left col-sm-6 lm">
+					<label for="other_option"><small>(If other please explain)</small></label>
+					<input class="form-control" id="other_option" type="text">
+				</div>
+			</div>
+             <div class="row">
+				<div class="col-xs-2 pull-left col-sm-6 lm">
+					<label for="household_receive_food">How often can ahousehold receive food from the grocery program</label>
+					<input class="form-control" id="household_receive_food" type="text">
+				</div>
+			</div>
+            <div class="row">
+				<div class="col-xs-2 pull-left col-sm-3 lm">
+					<label for="avg_num_ppl_served">Average number of people served per month</label>
+					<input class="form-control" id="avg_num_ppl_served" type="text">
+				</div>
+			</div>
+            <div class="row">
+				<div class="col-xs-2 pull-left col-sm-3 lm">
+					<label for="avg_num_households_served">Average number of households served per month</label>
+					<input class="form-control" id="avg_num_households_served" type="text">
+				</div>
+			</div>
+            <div class="row">
+				<div class="col-xs-2 pull-left col-sm-3 lm">
+					<label for="est_amnt_food_for_household_per_day_or_lb">Estimated amount of food provided per household, in days or pounds</label>
+					<input class="form-control" id="est_amnt_food_for_household_per_day_or_lb" type="text">
+				</div>
+			</div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-6"><b>Does the grocery program have a designated geographic service area?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="desig_geo_service">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="desig_geo_service">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+			<div class="row yes-no-quest">
+                <p class="pull-left col-sm-6"><b>Has a member of the grocery program attended food safety class?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="food_safety_attended">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="food_safety_attended">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2 pull-right col-sm-3 rm">
+					<label for="date_food_safety"><small>Date</small></label>
+					<input class="form-control" id="date_food_safety" type="text">
+				</div>
+				<div class="col-xs-2 pull-right col-sm-3 ">
+					<label for="name_food_safety"><small>Name</small></label>
+					<input class="form-control" id="name_food_safety" type="text">
+				</div>
+			</div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-6"><b>Are fees/donations/memberships required of the clients for any service?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="gr_memb_req">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="gr_memb_req">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row">
+				<div class="col-xs-2 pull-right col-sm-3 rm">
+					<label for="gr_membership_explaination"><small>If yes, please explain</small></label>
+					<input class="form-control" id="gr_membership_explaination" type="text">
+				</div>
+			</div>
+            <div class="row">
+				<div class="col-xs-2 pull-left col-sm-6 lm">
+					<label for="gr_funding">Funding Source</label>
+					<input class="form-control" id="gr_funding" type="text">
+				</div>
+			</div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-6"><b>Are days and hours of operation posted on the outside of the facility & visible to clients?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="gr_operation_times">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="gr_operation_times">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row">
+				<div class="col-xs-2 pull-left col-sm-6 lm">
+					<label for="food_assist_require">What are the requirements for food assistance</label>
+					<input class="form-control" id="food_assist_require" type="text">
+				</div>
+			</div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-6"><b>Does the grocery program track client participation?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="client_part_track">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="client_part_track">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-6"><b>Is intake process done in a confidential manner?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="confidential_intake">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="confidential_intake">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-6"><b>Does grocery program deliver food to clients?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="gr_client_food_deliv">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="gr_client_food_deliv">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row pull-right rm">
+            	<a href="http://cs.lewisu.edu/~alanwoshea/Food Safety.html" class="btn btn-default" role="button">Next</a>
+            </div>
+		</div>
+	</form>
+</div>
+</body>
+</html>

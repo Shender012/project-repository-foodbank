@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+<link rel="stylesheet" href="form.css"/>
+<header>
+	<title>Northern Illinos Food Bank</title> 
+</header> 
+<body style="background-color:floralwhite">
+<div id="wrapper">
+	<form>
+		<div class="form-group">
+			<div class="row">
+            	<img src="http://solvehungertoday.org/wp-content/uploads/2014/07/logo.png" alt="Northern Illinois Food Bank" href="http://solvehungertoday.org/" class="pull-left lm" >
+			</div>
+            <div class="row">
+				<div class="col-xs-2 pull-right col-sm-1 rm">
+					<label for="agency_num">Agency #</label>
+					<input class="form-control" id="agency_num" type="text" disabled>
+				</div>
+			</div>
+            <div class="row"> 
+            	<div class="text-center">
+                	<h3>Part V: Emergency Food Program (EFP) Information</h3>
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left"><b>Have there been any discrimination complaints at the program in the past year?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="discrimination_complaints">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="discrimination_complaints">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left"><b>If yes have the complaints been forwarded to the food bank?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="complaints_forwarded_to_foodbank">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="complaints_forwarded_to_foodbank">No</label>
+                    <label class="radio-inline"><input type="radio" name="complaints_forwarded_to_foodbank">N/A</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row">
+				<div class="pull-left lm">
+					<label for="EFP_TANF_inventory">Total cases of EFP/TANF product current in inventory: &nbsp;<small>(Must be counted during visit)</small></label>
+                </div>
+           
+             	<div class="col-xs-1 pull-left ">
+					<input class="form-control" id="EFP_TANF_inventory" type="text" >
+				</div>
+			</div>
+            <div class="row yes-no-quest">
+                <p class="pull-left"><b>Does the partner also operate another program?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="operate_antoher_program">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="operate_antoher_program">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left "><b>If yes, is the food seperated and tracked for the two programs?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="food_seperated_tracked">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="food_seperated_tracked">No</label>
+                    <label class="radio-inline"><input type="radio" name="food_seperated_tracked">N/A</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left "><b>Does the program have the EFP Site Manual on-site?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="efp_manual_onsite">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="efp_manual_onsite">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left "><b>Are visible signs posted appropriately announcing the days and hours of operation?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="operation_hours_visible">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="operation_hours_visible">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left "><b>Is the "And Justice For All" poster visible to the clients?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="posters_visible">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="posters_visible">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left "><b>Is this a religious organization?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="religious_org">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="religious_org">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left "><b>Is the Written Notice of Beneficiary Rights Poster visible to the clients?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="benef_rights_poster">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="benef_rights_poster">No</label>
+                    <label class="radio-inline"><input type="radio" name="benef_rights_poster">N/A</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left "><b>Are clients offerd a referral to a non-religious EFP feeding program?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="clients_referred_nonrelig">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="clients_referred_nonrelig">No</label>
+                    <label class="radio-inline"><input type="radio" name="clients_referred_nonrelig">N/A</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <!-- PROGRAM PROCEDURES SECTION-->
+            <div class="row"> 
+            	<div class="header-underline">
+                	<h4 style="margin-top:5em">Program Procedures</h4>
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-6"><b>Does the program require any documents from clients?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="docu_required">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="docu_required">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row">
+            	<p class="pull-left lm"><b><small>(Programs are prohibited from asking for social security cards, pay stubs and income data)</small></b></p>
+            </div>
+            <div class="row">
+				<div class="col-xs-2 pull-left col-sm-6 lm">
+					<label for="types_of_docs">Describe the types of documentation requested.</label>
+					<input class="form-control" id="types_of_docs" type="text">
+				</div>
+			</div>
+            <div class="row">
+				<div class="col-xs-2 pull-left col-sm-6 lm">
+					<label for="doc_request_purpose">Describe the purpose for requesting documentation.</label>
+					<input class="form-control" id="doc_request_purpose" type="text">
+				</div>
+			</div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-8"><b>Does the program allow households to receive food at least once every 30 days?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="monthly_household_food">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="monthly_household_food">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-8"><b>Are clients required to obtain referral from an outside agency in order to receive food?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="outside_ref_req">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="outside_ref_req">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <!-- EFP GROCERY PROGRAMS SECTION-->
+            <div class="row"> 
+            	<div class="header-underline">
+                	<h4 style="margin-top:5em">EFP Grocery Programs</h4>
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-8"><b>Does the pantry have other foods to distribute with governemnt commodities?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="other_food_to_distribute">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="other_food_to_distribute">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-8"><b>Are the "And Just For All", "Income Eligibility","Notice to Program Participants", and "Prohibited Activities" posters visible to the clients?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="efp_posters_visible">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="efp_posters_visible">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <!--Signature Documents SECTION-->
+            <div class="row"> 
+            	<div class="header-underline">
+                	<h4 style="margin-top:5em">Signature Documents</h4>
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-8"><b>Are DHS/TANF signature documents used?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="DHS_TANF_docs_used">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="DHS_TANF_docs_used">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-8"><b>Are signature sheets for the correct year?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="correct_yr_signsheets">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="correct_yr_signsheets">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-8"><b>Is the food bank name on the signature sheet?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="fb_name_on_signsheet">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="fb_name_on_signsheet">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-8"><b>Is the date on the signature sheet?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="date_on_signsheet">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="date_on_signsheet">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-8"><b>Does the recipient sign his/her name on the signature sheet?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="recipient_signs_signsheet">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="recipient_signs_signsheet">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-8"><b>Is the client's address recorded on signature sheet?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="client_addrs_on_signsheet">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="client_addrs_on_signsheet">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-8"><b>Is the household size recorded on signature sheet?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="household_size_on_signsheet">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="household_size_on_signsheet">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-8"><b>Are the number of children that 18 years or younger recorded in the TANF box?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="child_u18_recorded">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="child_u18_recorded">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <!--Proxy Documents SECTION-->
+            <div class="row"> 
+            	<div class="header-underline-dotted">
+                	<h4 style="margin-top:5em">Complete the following questions if proxy forms are used</h4>
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-8"><b>Are proxy forms for the correct year?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="correct_proxy_year">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="correct_proxy_year">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-8"><b>Does the proxy form contain the original signature of recipient?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="orig_sig_on_proxy_form">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="orig_sig_on_proxy_form">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-8"><b>Does the designated proxy sign the proxy form in the presence of pantry personnel?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="optradio25">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="optradio25">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row pull-right rm">
+            	<a href="http://cs.lewisu.edu/~alanwoshea/Forms.html" class="btn btn-default" role="button">Next</a>
+            </div>
+		</div>
+	</form>
+</div>
+</body>
+</htm
