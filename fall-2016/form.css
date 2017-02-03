@@ -1,0 +1,57 @@
+.form-groups {
+    width: 75%;
+	float: right;
+}
+.num { 
+	width: 15%; 
+	
+}
+.rm { 
+	margin-right: 15%;
+}
+.rm-tab { 
+	margin-right: 20%;
+}
+.yes-no-quest {
+	margin-left: 15%;
+	margin-right: 15%;
+	/*margin-top:: 10px; <--possibly use 5em?*/
+	border-bottom: thin solid black;	
+}
+.header-underline {
+	margin-left: 15%;
+	margin-right: 15%;
+	/*margin-top:: 10px; <--possibly use 5em?*/
+	border-bottom: 3px solid black;
+}
+.header-underline-dotted {
+	margin-left: 15%;
+	margin-right: 15%;
+	/*margin-top:: 10px; <--possibly use 5em?*/
+	border-bottom: 3px dotted black;
+}
+.lm {
+	margin-left: 15%;
+}
+.lm-tab {
+	margin-left: 20%;
+}
+.slm { 
+	margin-left: 10px;
+}
+.center { 
+    margin-left: 50%;
+    margin-right: 50%;
+}
+.w { 
+	text-align:left;
+}
+#wrapper { 
+	margin: 0 auto; 
+}
+div { 
+	margin-top:5px;
+}
+.bold {
+	font-weight:bold;
+}
