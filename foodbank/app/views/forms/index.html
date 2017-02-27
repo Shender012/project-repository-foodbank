@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+<link rel="stylesheet" href="form.css"/>
+<header>
+	<title>Northern Illinos Food Bank</title> 
+</header> 
+<body style="background-color:floralwhite">
+<div id="wrapper">
+	<form>
+		<div class="form-group">
+			<div class="row">
+            	<img src="http://solvehungertoday.org/wp-content/uploads/2014/07/logo.png" alt="Northern Illinois Food Bank" href="http://solvehungertoday.org/" class="pull-left lm" >
+			</div>
+            <div class="row">
+				<div class="col-xs-2 pull-right col-sm-1 rm">
+					<label for="agency_num">Agency #</label>
+					<input class="form-control" id="agency_num" type="text" disabled>
+				</div>
+			</div>
+            <div class="row"> 
+            	<div class="text-center">
+                	<h3>Part III: Food Safety, Storage and Inventory (ALL PROGRAMS)</h3>
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-6"><b>Does the Local Health Department require a permit?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="hd_permit_req">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="hd_permit_req">Not Required</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2 pull-right col-sm-2 rm">
+					<label for="score"><small>Score</small></label>
+					<input class="form-control" id="score" type="text">
+				</div>
+				<div class="col-xs-2 pull-right col-sm-2 ">
+					<label for="score_date"><small>Date</small></label>
+					<input class="form-control" id="score_date" type="text">
+				</div>
+            </div>
+            <div class="row">
+                <div class="pull-right rm">
+                	<p"><b><small>(If yes, provide copy of permit and date of last inspection)</small></b></p>
+            	</div>
+            </div>
+			<div class="row yes-no-quest">
+                <p class="pull-left col-sm-6"><b>Is there a regular cleaning schedule established and posted?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="reg_cleaning_posted">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="reg_cleaning_posted">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-6"><b>Does the site have routine professional pest control?<small>(Get Copy of Contract or Invoice)</small></b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="routine_pest_cntrl">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="routine_pest_cntrl">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row">
+				<div class="col-xs-2 pull-left col-sm-6 lm">
+					<label for="pest_inspector">With whom was the last inspection</label>
+					<input class="form-control" id="pest_inspector" type="text">
+				</div>
+                <div class="col-xs-2 pull-left col-sm-2 ">
+					<label for="pest_inspect_date">Last inspection date</label>
+					<input class="form-control" id="pest_inspect_date" type="text">
+				</div>
+			</div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-6"><b>Is all food stored at this location?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="food_stored_local">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="food_stored_local">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row">
+				<div class="col-xs-2 pull-left col-sm-8 lm">
+					<label for="food_storage_location"><small>If no, where is the additional storage</small></label>
+					<input class="form-control" id="food_storage_location" type="text">
+				</div>
+			</div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-6"><b>Is all food stored 6 inches off the floor?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="food_6in_off_grnd">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="food_6in_off_grnd">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-6"><b>Are refrigerator tempsbetween 35&deg;  and 40&deg;  F?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="fridge_temps_35_or_40">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="fridge_temps_35_or_40">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-6"><b>Are freezers 0&deg;  F or below?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="freeze_temps_0_below">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="freeze_temps_0_below">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-6"><b>Are there working thermometers in all storage areas and temps in proper range??</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="thermom_in_storage">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="thermom_in_storage">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row yes-no-quest">
+                <p class="pull-left col-sm-6"><b>Are temperature logs maintained and posted?</b></p>
+                <div class=" pull-right col-sm-2">
+                    <label class="radio-inline"><input type="radio" name="temp_logs">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="temp_logs">No</label>
+                    <p></p> <!-- Temporary Solution For Appearance -->
+                </div>
+            </div>
+            <div class="row pull-right rm">
+            	<a href="http://cs.lewisu.edu/~alanwoshea/Direct Connect.html" class="btn btn-default" role="button">Next</a>
+            </div>
+		</div>
+	</form>
+</div>
+</body>
+</html>
